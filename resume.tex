@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[a4paper,bottom = 0.3in,left = 0.4in,right = 0.4in,top = 0.75in]{geometry}
 \usepackage{graphicx}
-\usepackage{amsmath}
+\usepackage{amsmath, bm}
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{wrapfig}
@@ -70,14 +70,8 @@
 {\it Guide(s): Prof. Steve Kremer and Jannik Dreier}\hfill{\sl \small \textsc{INRIA, Nancy, France}}\\
 \vspace{-19pt}
 \begin{itemize}[itemsep = -1 mm, leftmargin=*]
-    \item Formal {\bf Verification} of security protocols:
-    \vspace{-8pt}
-    \begin{itemize}[itemsep = -0.75 mm, leftmargin=*]
-    %\begin{small}
-    \item Studied operational semantics and equivalence properties (in \textit{applied pi calculus} and \textbf{Tamarin} prover), the current translation of \textbf{SAPIC} (tool translating high level protocols to multiset rewrite rules, analyzable by Tamarin)
+    \item \underline{Formal {\bf Verification} of \textsl{security protocols}}: Studied operational semantics, equivalence properties (in \textit{applied pi calculus} and \textbf{Tamarin} prover) and \textbf{SAPIC} (tool translating high level protocols to multiset rewrite rules, {\it analyzable} by Tamarin)
     \item Introduced biprocesses (\textit{with bisemantics and their translation}), static equivalence and diff equivalence (\& \textit{diff} operator) in SAPIC, ensuring the soundness of the translation after the addition 
-    %\end{small}
-    \end{itemize}
 \end{itemize}
 \vspace{-5pt}
 \textbf{Quantitative Research Analyst} \hfill{\sl \small (Dec '19 - Jan '20)}\\
@@ -88,34 +82,33 @@
     \vspace{-7pt}
     \begin{itemize}[itemsep = -0.75 mm, leftmargin=*]
       %\begin{small}
-      \item Designed and implemented an intuitive approach to storing the history of a stock in the form of a vector using a Ticker \textbf{Embedding Model}, similar to a Word Embedding model. Incorporated technical indicators such as Momentum, Trailing Volatility, Asset Class and average return per asset class along with the embeddings for time series analysis
-     \item Designed, trained and tested an \textbf{LSTM} classifier (built using \textbf{PyTorch}) on a time series of multiple stock tickers to predict the Expected Return and to study non linearity and inter asset class correlation
-     \item Expanded the base LSTM to incorporate \textbf{attention}, and \textit{retrain} over the latest data \textit{while testing}
+      \item Designed and implemented an intuitive approach to storing the history of a stock in the form of a vector using a Ticker \textbf{Embedding Model}, similar to a Word Embedding model. Incorporated technical indicators such as Momentum, Trailing Volatility, Asset Class and average return per asset class along with the embeddings
+     \item Designed, trained and tested an \textbf{LSTM} classifier (using \textbf{PyTorch}) trained on a time series of multiple stock tickers to predict returns and study non linearity \& inter asset class correlation. 
+     \item Expanded the LSTM to incorporate \textbf{attention}, and \textit{retrain} over latest data \textit{while testing}
      \item Optimized the hyperparameters using libraries: Ray for \textbf{Grid Search} and Hyperopt for \textbf{Bayesian} optimization
      %\end{small}
     \end{itemize}
     \vspace{-4pt}
-    \item \textbf{Trading Algorithms: }{\it Implementation in Python:}
+    \item \textbf{Trading Algorithms:} Implemented the \textbf{Pairs}, \textbf{Betting against} $\bm{\beta}$ and \textbf{Momentum} trading strategies in \textbf{Python}
     \vspace{-7pt}
     \begin{itemize}[itemsep = -0.75 mm, leftmargin=*]
     %\begin{small}
-      \item Implemented the \textbf{PAIRS}, \textbf{Betting against Beta} and \textbf{Momentum} trading algorithms on the Indian Stock market
       \item Calculated $\beta$ by regression on the \textbf{CAPM} equation with a 6 month rolling window: Experimented with daily, weekly and monthly \textit{rebalancing} of the portfolio, and anaylzed the output on equally weighted and value weighted portfolios
-     \item Modified the PAIRS strategy on a 1 year rolling window with 12 \% CAGR and 0.71 overall Sharpe and researched the intricacies involved in the strategies:  Pitroski's F-Score, Mohanram's G-Score, Accruals, PEAD and Momentum crashes
+     \item Modified the Pairs strategy on a 1 year rolling window with 12\% CAGR and 0.71 overall Sharpe and researched the intricacies involved in the strategies:  Pitroski's F-Score, Mohanram's G-Score, Accruals, PEAD and Momentum crashes
      %\end{small}
     \end{itemize}
 \end{itemize}
-\newgeometry{bottom = 0.3in,left = 0.4in,right = 0.4in,top = 0.4in}
-%\vspace{-5pt}
-\hspace*{-15pt}\textbf{Data Analytics Intern} \hfill{\sl \small (June - July '19)}\\
+\vspace{-5pt}
+\textbf{Data Analytics Intern} \hfill{\sl \small (June - July '19)}\\
 {\it Guide: Mr. Amit Ambekar (Vice President, Marketing)}\hfill{\sl \small \textsc{Spencer's Retail Ltd.- RPSG group}}\\
 \vspace{-19pt}
 \begin{itemize}[itemsep = -1 mm, leftmargin=*]
     \item {\it \underline {Analysis of underperforming stores} given all KPIs and SKU (Stock Keeping Units) level data}: {\bf Statistical Analysis} of transactional \& brick level data to attribute reasons for de-growth in the {\it MGF Gurgaon} and {\it Vizag} hyper stores
      \item Given all category {\bf KPIs}, {\it deep dived} into SKU level performance to come up with solutions to counter degrowth
 \end{itemize}
-\vspace{-5pt}
-\textbf{Machine Learning Intern} \hfill{\sl \small (May - June '19)}\\
+\newgeometry{bottom = 0.3in,left = 0.4in,right = 0.4in,top = 0.4in}
+%\vspace{-5pt}
+\hspace*{-15pt}\textbf{Machine Learning Intern} \hfill{\sl \small (May - June '19)}\\
 {\it Guide: Prof. Vipul Arora}\hfill{\sl \small \textsc{Indian Institute of Technology, Kanpur}}\\
 \vspace{-19pt}
 \begin{itemize}[itemsep = -1 mm, leftmargin=*]
