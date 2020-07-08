@@ -1,0 +1,350 @@
+\documentclass[11.9pt,a4paper,sans, colorlinks=false, linkcolor=cyan]{moderncv}
+%\RequirePackage{fix-cm}
+% moderncv themes
+\moderncvtheme[blue]{classic} 
+% adjust the page margins
+\usepackage[scale=0.92,top=0.5cm,bottom=0.2cm]{geometry}
+\recomputelengths    
+% required when changes are made to page layout lengths
+%\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=0.5cm,nohead,nofoot]{geometry}
+%\nopagenumbers 
+%\usepackage[a4paper, left=0.7cm, right=0.7cm, top=0.7cm, bottom=0.1cm]{geometry} 
+\renewcommand*{\namefont}{\fontsize{32}{34}\mdseries\upshape}
+\renewcommand*{\titlefont}{\fontsize{12}{14}\mdseries\upshape}
+\fancyfoot{} % clear all footer fields
+%\fancyfoot[LE,RO]{\thepage}    
+%\fancyfoot[RE,LO]{\footnotesize}
+
+\renewcommand*{\cventry}[7][.25em]{%
+  \cvitem[#1]{#2}{%
+    {\bfseries#3}%
+%   \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}% I changed this line (with comma) ...
+    \ifthenelse{\equal{#4}{}}{}{ {\slshape#4}}% ... into this one (without comma).
+    \ifthenelse{\equal{#5}{}}{}{ #5}%
+    \ifthenelse{\equal{#6}{}}{}{ #6}%
+    \strut%
+    \ifx&#7&%
+      \else{{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+%%%
+% bibliography
+\usepackage[sorting=ydnt]{biblatex}
+\usepackage{etoolbox}
+%\patchcmd{\section}{\vspace*{2.5ex}}{\vspace{2.5ex}}{}{}
+\renewbibmacro*{date}{}
+% \renewbibmacro*{date+extrayear}{}
+\renewbibmacro*{issue+date}{}
+\newcommand*{\bibyear}{}
+
+% This hack is from here: https://tex.stackexchange.com/a/123818/8087
+% reformat bib style.
+\defbibenvironment{bibliography}
+  {\list
+     {\iffieldequals{year}{\bibyear}
+        {}
+        {\printfield{year}%
+         \savefield{year}{\bibyear}}}
+     {\setlength{\topsep}{0pt}% layout parameters based on moderncvstyleclassic.sty
+      \setlength{\labelwidth}{\hintscolumnwidth}%
+      \setlength{\labelsep}{\separatorcolumnwidth}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \leftmargin\labelwidth%
+      \advance\leftmargin\labelsep}%
+      \sloppy\clubpenalty4000\widowpenalty4000}
+  {\endlist}
+  {\item}
+
+\addbibresource{pub.bib}
+
+% personal data
+\firstname{Devansh}
+\familyname{Chandak}
+\title{\textit {Third Year Undergraduate\\ Computer Science and Engineering \\
+Indian Institute of Technology, Bombay} }       
+\address{Hostel 5, IIT Bombay\\Mumbai}{: 400076} 
+\mobile{+91 79805 34649}     
+\email{dchandak@cse.iitb.ac.in}   
+\homepage{www.cse.iitb.ac.in/~dchandak}
+\photo[90pt]{iitbblack.jpg}   
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\pagestyle{empty}
+%\vspace{-2mm}
+\vspace{-10mm}
+
+%Section
+%section{Education}
+%\cvdoubleitem{2018-Present}{\textbf{Bachelor of Technology in Computer Science and Engineering} }{}{}
+%\cvitem{2016-2018}{Nichalpur, Bugwara, Bijnor, U.P. - 246745}
+%\cvdoubleitem{2003-2016}{\small\url{https://github.com/dilawar}\normalsize}{Skype}%{\small dilawar\_s}
+
+\section{Education}
+\cventry{2018- Present}{Bachelor of Technology in Computer Science and Enginnering}{\newline Indian Institute of Technology Bombay,}{Mumbai, India}{\newline Cumulative GPA : 9.52 / 10.00 }{}  % arguments 3 to 6 can be left empty
+\cventry{2016 - 2018}{All India Senior School Certificate Examination}{\newline Central Board of Secondary Education (CBSE) Board Examinations,}{Grade 12}
+{\newline Birla High School, Kolkata, }
+{Percentage : \textit{99\%}}
+\cventry{2003 - 2016}{Indian Certificate of Secondary Education}{\newline ICSE Board Examinations,}{Grade 10}{\newline La Martiniere for Boys, Kolkata, }
+{Percentage : \textit{98.67\%}}
+\vspace{-2mm}
+%Section
+%Secured {\bf All India Rank 4}, State Rank 2 in the Grade 10 {\bf ICSE} Examination out of {\bf 250,000} students \hfill{\sl \small (2016)}
+\section{Scholastic Achievements} 
+\cventry{2016}{}{}{}{}{Secured {\textbf {All India Rank 4}}, State Rank 2 in the Grade 10 {\textbf {ICSE}} Examination out of {\textbf {250,000}} students
+}
+\cventry{2018}{}{}{}{}
+{Achieved {\textbf {All India Rank 5}} in the {\textbf {CBSE}} Board Examinations (Grade 12) out of {\textbf {1.2 million}} candidates\\ ({\textit {{\textbf {Overall}}} East Zone Topper} and {\textit {All India Rank 3}} in the Science Stream)}
+\cventry{2019}{}{}{}{}
+{\underline{Only student} to be awarded the {\textbf {Advanced Performance grade}} (AP) for \textit{extraordinary performance} \\in the {\textbf {Computer Programming and Utilization}} course out of 528 students}
+
+\cventry{2018}{}{}{}{}
+  {Awarded {\textbf {AP grade}} in {\textbf {Advanced Calculus}} (given to the top 12 students out of 1032) and in the {\textbf {Biology}}\\ course consisting of \textit{Molecular, Physical and Biomedical modules} (top 3 students out of 502)}
+
+\cventry{2018}{}{}{}{}
+  {Attained a Semester Performance Index (\textbf{SPI}) of \textbf {perfect 10} in the First Semester}
+
+\cventry{2019}{}{}{}{}
+  {Among the {\textbf {top 12}} students to be granted {\textbf {Change of Branch}}/Major to Computer Science}
+
+\cventry{2018}{}{}{}{}
+  {Offered {\textbf {Computer Science}} at the National University of Singapore ({\textbf {NUS}}) with \textbf{100 \%} scholarship}
+% work.
+\vspace{-2mm}
+\section{Internship and Research Experience}
+\cventry{Apr - Present 2020}{Scholarly Document Processing - EMNLP}{\hfill{\sl \small \textsc {EMNLP 2020}}}
+{\newline {}}{}
+{ \textsc{LongSumm: }
+Shared Task for \underline{{Generating long summaries of scientific documents:}}
+\begin{itemize}
+     \item Parsed PDFs to extract individual sections of scientific papers using GROBID and \textit{Beautiful Soup}, in \textbf{Python}
+     \item Combining \textit{abstractive and extractive} summarization techniques to generate summaries (upto 600 words)
+     \item Used ROUGE between sentences in target summary and document, to generate target sectional summaries
+     \item Building models based on \textbf{PreSumm} (\textbf{SciBERT} with pretrained encoders), to summarize each section seperately
+    \end{itemize}
+}
+\vspace{1mm}
+\cventry{Apr - May 2020}{Research Intern $\bigm|$ \textit{Cryptography}}{\hfill{\sl \small \textsc {INRIA, Nancy, France}}}
+{\newline {\underline{{Formal \textbf{Verification} of security protocols:}} \hfill{\textit {Guide(s): Prof. Steve Kremer and Jannik  Dreier}}}}{\newline}
+{
+\begin{itemize}
+    \item Studied operational semantics and equivalence properties (in \textit{applied pi calculus} and \textbf{Tamarin} prover), the current translation of \textbf{SAPIC} (tool translating high level protocols to multiset rewrite rules, analyzable by Tamarin)
+    \item Introduced biprocesses (\textit{with bisemantics and their translation}), static equivalence and diff equivalence (\& \textit{diff} operator) in SAPIC, ensuring the soundness of the translation after the addition 
+    \end{itemize}
+}
+\vspace{1mm}
+\cventry{Dec - Jan 2019 - 20}{Quantitative Research Analyst}{\hfill{\sl \small \textsc {Indian School of Business, Hyderabad}}}
+{\newline {\textit {Guide(s): Prof. Prasanna Tantri, Prof. Nitin Kumar and Ravi Ranjan  }}}{\newline}
+{ \textsc{Deep Learning :}
+\underline{{Applying NLP techniques to \textbf{Time Series Analysis} for Stock Futures :}}
+\begin{itemize}
+    %\item {\textit {\underline {Analysis of underperforming stores}} given all KPIs and SKU (Stock Keeping Units) level data  }
+    %\begin{itemize}%
+      \item Designed and implemented an intuitive approach to storing the history of a stock in the form of a vector using a Ticker Embedding Model, similar to that in a Word Embedding model
+     \item  Incorporated a number of technical indicators such as Momentum, Trailing Volatility, Asset Class and average return across each asset class along with these embeddings for time series analysis
+     \item Designed, trained and tested an \textbf{LSTM} classifier (built using \textbf{PyTorch}) on a time series of multiple stock tickers to predict the Expected Return and to study non linearity and inter asset class correlation
+     \item Expanded the base LSTM to incorporate \textbf{attention}, and \textit{retrain} over the latest data \textit{while testing}
+     \item Optimized the hyperparameters using libraries: Ray for \textbf{Grid Search} and Hyperopt for \textbf{Bayesian} optimization
+    \end{itemize}
+}
+\cventry{}{}{}
+{}{}
+{\vspace{4mm}
+\textsc{Trading Algorithms: }\underline{{Implementation in \textbf{Python} :}}
+\begin{itemize}
+    %\item {\textit {\underline {Analysis of underperforming stores}} given all KPIs and SKU (Stock Keeping Units) level data  }
+    %\begin{itemize}%
+      \item Worked towards developing, modifying and implementing \textbf{PAIRS}, \textbf{Betting against Beta} and \textbf{Momentum} trading algorithms on the Indian Stock market at the NSE Trading Lab
+      \item Beta was calculated by regression on the \textbf{CAPM} equation with a 6 month rolling window : 
+      \begin{itemize}
+          \item The strategy was implemented with daily, weekly and monthly \textit{rebalancing} of the portfolio
+          \item Performed and anaylzed the difference in output on equal weighted and value weighted portfolios
+      \end{itemize}
+     \item Modified the PAIRS strategy on a rolling window of 1 year with 12\% CAGR and 0.71 overall Sharpe
+     \item Researched the intricacies in  Pitroski's F-Score, Mohanram's G-Score, Accruals, PEAD and Momentum crashes
+    \end{itemize}
+%\end{itemize}%
+}
+\vspace{1mm}
+\cventry{June - July 2019}{Data Analytics Intern}{\hfill{\sl \small \textsc {Spencer's Retail Ltd.- RPSG group}}}
+{\newline {\textit {Guide: Mr. Amit Ambekar (Vice President)}}
+}{\newline}
+{\begin{itemize}
+    %\item {\textit {\underline {Analysis of underperforming stores}} given all KPIs and SKU (Stock Keeping Units) level data  }
+    %\begin{itemize}%
+      \item 
+          {\textbf {Statistical Analysis}} of transactional \& brick level data of the underperforming stores, to understand and attribute reasons for de-growth, using \textbf{Pandas}, Sqlite and the various graph visualizations in \textbf{Matplotlib}
+     \item Given all the {\textbf {KPIs}} with respect to category, used {\textbf {deep dive}} into individual SKU level performance to come up with solutions to counter degrowth, in the {\textit {MGF Gurgaon Hyper}} store and the {\textit {Vizag Hyper}} store
+    \end{itemize}
+%\end{itemize}%
+}
+\vspace{1mm}
+\cventry{May - June 2019}{Machine Learning Research Intern}{\hfill{\sl \small \textsc {Indian Institute of Technology, Kanpur}}}%{\newline \textsc{Indian Institute of Technology, Kanpur}}
+{\newline{\underline{{Analysis of ML Algorithms for Spam Email Classification in Python}}\hfill{\textit{Guide: Prof. Vipul Arora}}}}{\newline}{
+    \begin{itemize}%[itemsep = -0.75 mm, leftmargin=*]
+    %\item \underline{\textit {Analysis of ML Algorithms for Spam Email Classification in Python}}
+    %\begin{itemize}%[itemsep = -0.75 mm, leftmargin=*]
+      \item Analyzed KNN, Naive Bayes, SVMs and Neural Networks and finally implemented {\textbf {Naive Bayes}} and {\textbf {KNN}} for the classification of various data sets into {\textbf {spam and ham}} using {\textit {Keras}}, Pandas, Numpy and {\textit {Scikit-learn}}
+      \item Compared accuracies for various data sets and {\textbf {categorised the best method}} for each data set
+    %\end{itemize}
+\end{itemize}}
+\vspace{1mm}
+\cventry{Nov - Dec 2018}{Software Engineering Intern}%{\newline \textsc{Citytech Software Pvt. Ltd.}}
+{}
+%{\textit{Asia's largest Science and Technology Festival, footfall of 175,000 +} \hfill{\sl \small \textsc {IIT Bombay}%
+{\newline \textit{Guide: Mr. Mohsin Ali (Project Manager)}\hfill{\sl \small \textsc {Citytech Software Pvt. Ltd.}} }{\newline}
+{\begin{itemize}%[itemsep = -0.75 mm, leftmargin=*]
+  \item Configured and enhanced a \textbf{chatbot} for Paylite Leave Application using the \textbf{Microsoft LUIS} platform 
+  \item Helped in introducing VOICE to TEXT feature (using Bing API) from Microsoft Azure
+  \item Research on \textbf{Human Resource Automation} and \textbf{comparative study} between {\textit {LUIS}}, {\textit {Google Dialog Flow}} and other developments in \textit{Google Assistant, IBM Watson, Alexa and Cortana}
+\end{itemize}
+}
+\section{Projects \& Key Assignments}
+\cventry{Computer Networks}{Distributed Spanning Tree Protocol}
+{\hfill{\textsc{prof. varsha apte} $\bigm|$ \sl \small (Feb - Mar '20)}}{\newline}{}
+{  \begin{itemize}
+    \item Simulated the network bridge topology as a \textit{distributed system} of nodes, communicating via messages, in \textbf{C++}
+    \item Configured nodes to run the protocol and agree upon a \textit{loop-less} logical topology to prevent a \textit{broadcast storm}
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Logic for CS}{SAT Solver}
+{\hfill{\textsc{prof. ashutosh gupta} $\bigm|$ \sl \small (Jan - Feb '20)}}{\newline}{}
+{  \begin{itemize}
+    \item Designed a SAT Solver using \textbf{z3 in Python}, to check satisfiability in CNF (Conjunctive Normal Form)
+    \item Solved the \textit{NQueens and Sudoku} problems with the designed solver, using \textbf{DPLL} (a backtracking algorithm) 
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Software Systems}{Google Forms and Survey Management}
+{\hfill{\textsc{prof. amitabha sanyal} $\bigm|$ \sl \small (Sept - Nov '19)}}{\newline}{}
+{  \begin{itemize}
+    \item Designed own Form and Survey Management system like the Google Forms with own \textit{user authentication}
+    \item Allowed for \textit{\underline{modular}} design of questions (single and multi line, file upload, drop down, checkbox, radio button, rating scale and toggle) and form validation (can give constraints on each answer such as alphanumeric, numeric, range, email-ID, .pdf only), and added a feature of adding \textbf{collaborators} to your form
+    \item Developed shareable forms, useable as surveys and quizzes. Data acquired
+    is analyzed by plotting of numerics (using \textbf{Matplotlib}), learning dependencies among responses and summarized presentation of subjective answers
+    \item Used \textbf{Django} for backend, \textbf{Sqlite3} for the database structure, \textbf{Bootstrap} for responsiveness
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Data Structures and Algorithms}{Efficient Memory Allocator}
+{\hfill{\textsc{prof. ajit diwan} $\bigm|$ \sl \small (Aug - Sept '19)}}{\newline}{}
+{  \begin{itemize}
+    \item Designed a simulator in \textbf{C++} for the efficient dynamic allocation of memory to a large number of processes
+    \item Utilized the \textbf{first-fit strategy} to decide the locations at which memory should be allocated
+    \item Handled allocation, deallocation and termination requests for upto $10^{\text{6}}$ requests simultaneously
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Data Analysis}{Fruit Image Generation and PCA}
+{\hfill{\textsc{prof. suyash awate} $\bigm|$ \sl \small (Oct - Nov '19)}}{\newline}{}
+{  \begin{itemize}
+    \item \textit{\underline{Principal Component Analysis}} was performed on RGB images of 100 fruits, and the closest representations were plotted, in \textbf{MATLAB}, using the mean and the four eigenvectors corresponding to the four most significant eigenvalues of the covariance matrix. A \textit{MultiVariate Gaussian} was fitted on the entire dataset
+    \item New Fruit images were generated by random sampling, using the closest representations, which were distinct from any fruit in the dataset, but representative of the dataset
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Data Analysis}{PCA on MNIST data}
+{\hfill{\textsc{prof. suyash awate} $\bigm|$ \sl \small (Oct - Nov '19)}}{\newline}{}
+{  \begin{itemize}
+    \item Given the MNIST dataset, \textbf{Principal Component Analysis} was performed on the images of each digit to visualize their principal modes of variation about the mean (by fitting a \textit
+    {MultiVariate Gaussian}) in \textbf{MATLAB}
+    \item The number of principal eigenvalues were found, to decide on the number of \textit{degrees of freedom} of each digit
+    \item Attributed reasons to why the number of significant eigenvalues are far lesser than total, and also concluded behavioural patterns in writing digits based on the principal modes of variation
+\end{itemize}
+}
+\vspace*{0.75cm}
+\cventry{Data Analysis}{Non Parametric Estimation \& Cross Validation}
+{\hfill{\textsc{prof. ajit rajwade} $\bigm|$ \sl \small (Sept - Oct '19)}}{\newline}{}
+{  \begin{itemize}
+    \item Compared various non paramteric estimation techniques like histogramming and Kernel Density Estimation and anaylzed the \textit{rate of convergence} and their optimum value
+    \item Implemented the Cross-Validation procedure in \textbf{MATLAB} by finding out the bandwidth parameter which gives the maximum joint likelihood and a minimum deviation between the empirical and the actual PDF
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Software Systems}{Image Reconstruction \& Compression}
+{\hfill{\textsc{prof. amitabha sanyal} $\bigm|$ \sl \small (Aug '19)}}{\newline}{}
+{  \begin{itemize}%[itemsep = -0.75 mm, leftmargin=*]
+  \item Transformed \textbf{distorted} images by cleaning out noises such as \textit{salt and pepper} noise using \textbf{Numpy} \& \textbf{Scipy}
+  \item Used \textit{KMeans++} algorithm to flatten out coloured images across several K values to get the \textbf{Enhanced} Image  
+\end{itemize}
+}
+\section{Scholarships and Recognition} 
+\cventry{2018 - 19}{}{}{}{}{Bagged the \textbf {Institute Academic Award}, given to the \textbf{Top 25} out of a batch of 1000+ students for \textit{exceptional} academic performance in the first year of Undergraduate Study at IIT Bombay}
+\cventry{2018}{}{}{}{}
+{Bestowed with the \textbf{KVPY} (Kishore Vaigyanik Protsahan Yojna) Fellowship, given to the talented young minds in the field of Science and Technology, by Department of Science and Technology, Govt. of India}
+\cventry{2016, 2018}{}{}{}{}
+{Felicitated by \textbf{The Governor of West Bengal}, with the \textit{Mamraj Agarwal Rashtriya Puraskar} for exemplary performance in the ICSE and by \textit{Mr. S.K.Birla}, industrialist \& trustee of Birla High School with a \textbf{Gold} medal}
+
+\cventry{2018}{}{}{}{}
+  {Received a \textbf{Letter of Appreciation} from Ms. Mamata Banerjee, Chief Minister of  West Bengal for \textit{exemplary} performance in the CBSE Examinations along with the \textit{\underline{Swami Vivekananda Scholarship}} for \textit{Undergraduate Study}}
+
+\cventry{2016, 2018}{}{}{}{}
+  {Granted the \textit{Ramawatar Gupt Pratibha Puraskar} and a cash award by \textbf{Sanmarg Foundation} for securing \textbf{99}\% in Hindi in the ICSE Examinations, the \textbf{Times of India EduShine} for stupendous performance in the Grade 12 Board}
+  
+\cventry{2016}{}{}{}{}
+  {Recipient of the \textbf{Udbhav Poddar Memorial} Prize and the Dr. \textbf{RS Pandey Proficiency} \textit{Silver Medal} for securing the \textbf{highest marks} in the country in Mathematics and Hindi respectively, in the ICSE}
+
+%\vspace{0mm}
+\section{Positions of Responsibility}
+\cventry{Jul - Nov 2019}{Teaching Assistant\newline} %\hfill{\sl \small\textsc {IIT Bombay}}\newline}
+%{\textsc{IIT Bombay}\newline}
+{}
+{\textit{CS 101 - Computer Programming and Utilization under Prof. Purushottam Kulkarni\newline}}{}
+{ \begin{itemize}%[itemsep = -0.75 mm, leftmargin=*]
+\item \textbf{Only sophomore} to be selected for the TA-Ship on the basis of {\bf academic prowess} in the subject
+\item  Involved in teaching and assisting students within and outside lab hours,  with problems, conceptual \\doubts and other clarifications on a {\bf one-to-one basis}
+\end{itemize}}
+\cventry{2017-18}{Interact Coordinator --- Community Service\newline}
+%{\textsc{Rotary International}\newline}
+{}
+{\textit{Rotary Club of Calcutta Visionaries}\hfill{\sl \small\textsc{Rotary International} \newline}}{}
+{   \begin{itemize} %[itemsep = -0.75 mm, leftmargin=*]
+    \item Coordinated \textbf {blood camps, health camps}, eye camps, newspaper collection drives
+    \item \textbf {Organised sports} for \textit {village children} in Lakshya Bagan, Sunderban, West Bengal
+    \item Conducted free \textbf {computer classes} for \textit {underpriveleged} children of Sambhu Sadan Vidayala, Kolkata
+  \end{itemize}
+}
+\cventry{Apr 2019 - Jan 2020}{Events Coordinator, Techfest\newline}
+{}
+{\textit{Asia's largest Science and Technology Festival, footfall of 175,000 +} \hfill{\sl \small \textsc {IIT Bombay} \newline}}{}
+{   \begin{itemize} %[itemsep = -0.75 mm, leftmargin=*]
+\item Spearheaded a team of \textbf{15+} in conceptualizing and organizing \textbf{Technoholix}, featuring performances and concerts from renowned \textbf {International} performers, and a part of the \textit{Techfest World MUN} 2020 team 
+\item Involved in organizing \textbf{PAN India} workshops about investment education along with \textbf{NISM, NSE \\and SEBI} as a part of the \textit{Financial Literacy Initiative} to promote financial literacy among the youth
+\end{itemize}
+}
+%\cventry{Other projects}{}
+%{}{}{}
+%{
+ %   My other public projects can be found on \url{https://github.com/dilawar/}.
+  %  Among these, \texttt{CodeSniffer} which checks plagiarism in student's coding
+  %  assignments; a parser of WAV file; eye blink detection (opencv); a tool to
+  %  extract data from old figures are more popular on github.
+%}
+\section{Technical Skills}
+\cvline{Languages}{\textsc{C++, Python, Java, Bash, MATLAB}}
+\cvline{ML Libraries}{\textsc{Pytorch, Keras, TensorFlow, Ray, Hyperopt, Scikit- Learn, ROUGE }}
+%\cvline{CAD Tools}{KiCAD, Cadence, Xilinx and Altera tools, Ngspice}
+\cvline{Web Tools}{\textsc{HTML5, CSS3, Javascript, Bootstrap, Django, Sqlite3, Markdown}}
+\cvline{Tools and Softwares}{\textsc{Git, \LaTeX, AutoCAD, Sed, Awk, Makefiles, CMake, Scipy, Yaml, Toml, ns3, z3, Wireshark, Proverif, Tamarin, Sapic, GROBID, Beautiful Soup
+}}
+\section{Key Courses Undertaken}
+\cvline{Computer Science and Mathematics}{Data Structures and Algorithms, Discrete Structures, Algorithm Design , Abstractions \& Paradigms, Data Analysis and Interpretation, Software Systems, Computer Programming \& Utilization, Computer Networks, Digital Logic Design, Logic for CS, Calculus, Linear Algebra, Differential Equations}
+%\cvline{CAD Tools}{KiCAD, Cadence, Xilinx and Altera tools, Ngspice}
+%\cvline{Mathematics}{Calculus, Linear Algebra, Differential Equations}
+\cvline{Others}{Quantum Physics, Electricity and Magnetism, Biology, Introduction to Electrical and Electronics Circuits}
+%\section{Extracurriculars}
+%\cvline{2006-19}{Playing \textit{Lawn Tennis} for 10+ years (won awards at the Club Level) and also a regular swimmer}
+%\cvline{CAD Tools}{KiCAD, Cadence, Xilinx and Altera tools, Ngspice}
+%\cvline{2019}{Participated in \textbf{DanceMania} 2k19, the Inter Hostel Dance Competition at IIT Bombay}
+%\cvline{2010}{Completed \textbf{Eight} levels of Abacus in the UCMAS Academy and won a \textit{Merit Certificate} for Level Six}
+%\cvline{2003-18}{Active player of Cricket, Table Tennis and, also involved in debating and elocution at the school level}
+%\cvline{2016}{Took part in the National Science Olympiad and won a \textit{gold} medal}
+%\cvline{2012}{Participated in the Spanish \textit{Guitar playing competition}, Sur-Tal}
+\nocite{*}
+\printbibliography[title={Publications}]
+\vspace{-10mm}
+
+
+\end{document}
