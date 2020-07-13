@@ -1,0 +1,216 @@
+\documentclass{article}
+\usepackage[a4paper,bottom = 0.2in,left = 0.4in,right = 0.4in,top = 0.75in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath, bm}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\xfilll}[2][1ex]{
+\dimen0=#2\advance\dimen0 by #1
+\leaders\hrule height \dimen0 depth -#1\hfill}
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}
+\renewcommand\labelitemi{\raisebox{0.4ex}{\tiny$\bullet$}}
+\renewcommand{\labelitemii}{$\cdot$}
+\pagenumbering{gobble}
+\begin{document}
+\vspace*{90 pt}
+% \vspace{-10pt}
+% \hspace*{-14pt}
+%Pursuing {\bf Major} in Computer Science and Engineering \\
+\vspace*{-20 pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SCHOLASTIC ACHIEVEMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-5pt}
+\section*{{\large Scholastic Achievements}\xfilll[0pt]{0.5pt}}
+\vspace{-8pt}
+\begin{itemize}[itemsep = -1 mm, leftmargin=*]
+% {\bf 8\textsuperscript{th} in the Department} out of 121 students and
+%\item Ranked {\bf 10\textsuperscript{th} in the Institute} out of 905 students\hfill{\sl \small (2016)}
+\item Secured {\bf All India Rank 4}, State Rank 2 in the Grade 10 {\bf ICSE} Examination out of {\bf 250,000} students \hfill{\sl \small (2016)}
+\item Achieved {\bf All India Rank 5} in the {\bf CBSE} (Grade 12) out of {\bf 1.2 million} candidates ({\it {\bf Overall} East Zone Topper)}\hfill{\sl \small (2018)}
+\item \underline{Only student} to receive the {\bf Advanced Performance}(AP) grade in {\bf Computer Programming} \& {\bf Utilization} and amongst the {\bf top 3} in the {\bf Biology} course\textit{(Molecular, Physical and Biomedical modules)} \textsl{out of \textbf{500+} students}\hfill{\sl \small(2018-19)}
+\item Awarded {\bf AP grade} in {\bf Advanced Calculus} (\textsl{top} {\bf 12} \textsl{out of} {\bf 1000+} students) for \textit {exemplary} performance\hfill{\sl \small(2018)}
+\item Among the {\bf top 12} students to be granted {\bf Change of Branch}/Major to Computer Science\hfill{\sl \small(2019)}
+\item  Bagged the {\bf Institute Academic Award}, given to the \textbf{Top 25} out of a batch of 1000+ students
+ \hfill{\sl \small (2018-19)}
+\item  Bestowed with the {\bf KVPY} Fellowship, by Department of Science and Technology, Govt. of India \hfill{\sl \small (2018)}
+\item Felicitated by \textbf{The Governor of West Bengal} for exemplary performance in the ICSE \hfill{\sl \small (2016)}
+\item Received a \textbf{Letter of Appreciation} from the Chief Minister of West Bengal for performance in the CBSE\hfill{\sl \small (2018)}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  INTERESTS   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section*{{\large Interests}\xfilll[0pt]{0.5pt}}
+%\vspace{-4pt}
+%Data Structures and Algorithms, Data Analysis and Interpretation, Graph Theory, Competitive Coding, Combinatorics and Probability Theory, Discrete Structures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  PROJECTS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-20pt}
+\section*{\large Internship and Research Experience\xfilll[0pt]{0.5pt}}
+\vspace{-9pt}
+\textbf{Research Intern | Cryptography} \hfill{\sl \small \textsc{INRIA, Nancy, France} $\bigm|$ (April - May '20)}\\
+\vspace{-19pt}
+\begin{itemize}[itemsep = -1 mm, leftmargin=*]
+    \item \underline{Formal {\bf Verification} of \textsl{security protocols}}: Studied operational semantics, equivalence properties (in \textit{applied pi calculus} and \textbf{Tamarin} prover) and \textbf{SAPIC} (tool translating high level protocols to multiset rewrite rules, {\it analyzable} by Tamarin)
+    \item Introduced biprocesses (\textit{with bisemantics}), static equivalence and diff equivalence (\& \textit{diff} operator) in SAPIC
+\end{itemize}
+\vspace{-5pt}
+\textbf{Quantitative Research Analyst} \hfill{\sl \small \textsc{Indian School of Business, Hyderabad} $\bigm|$ (Dec '19 - Jan '20)}\\
+\vspace{-18pt}
+\begin{itemize}[itemsep = -1 mm, leftmargin=*]
+    \item \textbf{Deep Learning: }\underline{\it Applying NLP techniques to \textbf{Time Series Analysis} for Stock Futures :}
+    \vspace{-7pt}
+    \begin{itemize}[itemsep = -0.75 mm, leftmargin=*]
+      %\begin{small}
+      \item Designed an intuitive approach for storing history of stocks in a vector using a Ticker \textbf{Embedding Model} (like Word Embeddings) by incorporating technical indicators such as Momentum, Trailing Volatility and Asset Class
+     \item Designed an \textbf{LSTM} classifier (in \textbf{PyTorch}) trained on a time series of multiple stock tickers to predict returns and study non linearity \& inter asset class correlation. Expanded it to incorporate \textbf{attention}, and \textit{retrain} over latest data \textit{while testing}. Optimized the hyperparameters using libraries: Ray for \textbf{Grid Search} and Hyperopt for \textbf{Bayesian} optimization
+     %\end{small}
+    \end{itemize}
+    \vspace{-4pt}
+    \item \textbf{Trading Algorithms:} Implemented the \textbf{Pairs}, \textbf{Betting against} $\bm{\beta}$ and \textbf{Momentum} trading algorithms in \textbf{Python}
+\end{itemize}
+\vspace{-5pt}
+\textbf{Data Analytics Intern} \hfill{\sl \small \textsc{Spencer's Retail Ltd.- RPSG group} $\bigm|$ (June - July '19)}\\
+\vspace{-19pt}
+\begin{itemize}[itemsep = -1 mm, leftmargin=*]
+    \item {\it \underline {Analysis of underperforming stores} given all KPIs and SKU (Stock Keeping Units) level data}: {\bf Statistical Analysis} of transactional \& brick level data to attribute reasons for de-growth in the {\it MGF Gurgaon} and {\it Vizag} hyper stores
+\end{itemize}
+\vspace{-5pt}
+\textbf{Machine Learning Intern} \hfill{\sl \small \textsc{Indian Institute of Technology, Kanpur} $\bigm|$ (May - June '19)}\\
+\vspace{-19pt}
+\begin{itemize}[itemsep = -1 mm, leftmargin=*]
+    \item \underline{\it Analysis of ML Algorithms for Spam Email Classification in Python}: Anaylzed SVMs and Neural Networks before\\implementing {\bf Naive Bayes} and {\bf KNN} on numerous data sets using {\it Keras}, Pandas, Numpy and {\it Scikit-learn}
+\end{itemize}
+\vspace{-5pt}
+\textbf{Software Engineering Intern} \hfill{\sl \small \textsc{Citytech Software Pvt. Ltd.} $\bigm|$ (Nov - Dec '18)}\\
+\vspace{-19pt}
+\begin{itemize}[itemsep = -1 mm, leftmargin=*]
+  \item Configured and enhanced a {\bf chatbot} for Employee Leave Applications using {\bf Microsoft LUIS} after a {\sl comparative study} with {\it Google Dialog Flow}. Helped in introducing \textsl{Voice to Text feature} (using Bing API) from Microsoft Azure
+  %\item Researched on {\bf Human Resource Automation} and developments in \textit{Google Assistant, IBM Watson, Alexa and Cortana}
+\end{itemize}
+
+
+\vspace{-20pt}
+\section*{\large Key Technical Projects\xfilll[0pt]{0.5pt}}
+\vspace{-9pt}
+\textbf{Textgraphs-14 | COLING 2020} \hfill{\sl \small \textsc{NLP Conference Workshop} $\bigm|$ (July '20 - Present)}\\
+\vspace{-19pt}
+\begin{itemize}[itemsep = -1.5 mm, leftmargin=*]
+    \item Shared Task on \textsc{Multi-Hop Inference for Explanation Regeneration}%\hfill{\sl \small \textsc{Personal Project}}
+    \vspace{-7pt}
+    \begin{itemize}[itemsep = -1 mm, leftmargin=*]
+     % \begin{small}
+      \item Optimizing the {\it tf.idf} baseline to construct gold explanations for elementary science questions, using the WorldTree corpus
+      \item Linking facts (Textgraph) based on {\it lexical overlap} to select {\sl next-hop} explanations and using \textsc{BERT} as a reranking model
+      %\end{small} $\bigm|$ \textsc{}
+    \end{itemize}
+\end{itemize}
+\vspace{-5pt}
+\textbf{Scholary Document Processing | EMNLP 2020} \hfill{\sl \small \textsc{NLP Conference Workshop} $\bigm|$ (Apr '20 - Present)}\\
+\vspace{-19pt}
+\begin{itemize}[itemsep = -1.5 mm, leftmargin=*]
+    \item \textsc{LongSumm: }Shared Task for \underline{\textsl{Generating long summaries of scientific documents:}} %\hfill{\sl \small \textsc{Personal Project}}
+    \vspace{-7pt}
+    \begin{itemize}[itemsep = -1 mm, leftmargin=*]
+     % \begin{small}
+      \item Parsed PDFs to extract individual sections of scientific papers using \textsc{Grobid} and \textit{Beautiful Soup}, in \textbf{Python}
+     \item Combining \textit{abstractive} \& {\it extractive} summarization and exploring \textsl{Reinforcement Learning} techniques for summarization 
+      %\item Used \textsc{Rouge} between sentences in target summary and document, to generate target sectional summaries
+     \item Building models based on \textbf{PreSumm} (\textbf{SciBERT} with pretrained encoders), to summarize each section seperately
+      %\end{small}
+    \end{itemize}
+\end{itemize}
+\vspace{-5pt}
+\textbf{Google Forms and Survey Management} \hfill{\sl \small \textsc{Course Project} $\bigm|$ (Sept - Nov '19)}
+\vspace{-7pt}
+\begin{itemize}[itemsep = -1.5 mm, leftmargin=*]
+    \item Designed own Form and Survey Management system like Google Forms with \textit{user authentication}
+    \item Allowed \textit{\underline{modular}} question design, form validation, adding \textbf{collaborators} and shareable forms (surveys \& quizzes)
+    \item Data analyzable by plotting of numerics (\textbf{Matplotlib}), learning dependencies in responses and summarized presentation of subjective answers. Used \textbf{Django} for backend, \textbf{Sqlite3} for database structure, \textbf{Bootstrap} for responsiveness
+\end{itemize}
+
+% \hspace*{-16pt}\textbf{Image Reconstruction \& Compression} \hfill{\sl \small (Aug '19)}\\
+% {\it Guide: Prof. Amitabha Sanyal | Software Systems}\hfill{\sl \small IIT Bombay}\\
+% \vspace{-17pt}
+% \begin{itemize}[itemsep = -0.75 mm, leftmargin=*]
+%   \item Transformed {\bf distorted} images by cleaning out noises such as {\it salt and pepper} noise using Numpy and Scipy
+%   \item Used {\it KMeans++} algorithm to flatten out coloured images across several K values to get the {\bf Enhanced} Image  
+% \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% OTHER PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% \section*{\large Other Projects\xfilll[0pt]{0.5pt}}
+% \vspace{-8pt}
+% \textbf{Movie Recommendation System} \hfill{\sl \small (Sept '16)}\\
+% %{\it Guide : Prof. Sharat Chandran}\hfill{\sl \small IIT Bombay}\\
+% \vspace{-17pt}
+% \begin{itemize}[itemsep = -0.75 mm, leftmargin=*]
+%   \item Implemented {\bf Memory based Collaborative Filtering} in Python to recommend unwatched movies
+%   \item Used {\bf Pearson Correlation Coefficient} to evaluate `closeness' of critics to user considering common dataset
+% \end{itemize}
+% \vspace{-3pt}
+% \textbf{Cryptarithmetic Puzzle Solver} \hfill{\sl \small (March '16)}\\
+% %{\it Guide : Prof. Om P. Damani}\hfill{\sl \small IIT Bombay}\\
+% \vspace{-17pt}
+% \begin{itemize}[itemsep = -0.75 mm, leftmargin=*]
+%   \item Implemented {\bf Backtracking} in C++ to generate all solutions of {\bf general alphametic puzzles} (like \\ \texttt{THE + DREAM = WAITS}) where each character solves for a digit ranging from 0 to 9
+% \end{itemize}
+% \vspace{-3pt}
+% \textbf{Symbolic Differentiation and Integration} \hfill{\sl \small (April '16)}\\
+% %{\it Guide : Prof. Om P. Damani}\hfill{\sl \small IIT Bombay}\\
+% \vspace{-17pt}
+% \begin{itemize}[itemsep = -0.75 mm, leftmargin=*]
+%   \item Implemented an {\bf Inheritance Class Hierarchy} in C++ to evaluate differential and integral expressions of {\bf rational expressions} in one variable
+% \end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  POSITIONS OF RESPONSIBILITY   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-20pt}
+\section*{\large Positions of Responsibility\xfilll[0pt]{0.5pt}}
+\vspace{-10pt}
+\textbf{Teaching Assistant} $\bigm|$ {\it CS 101 - Computer Programming} \& {\it Utilization} $\bigm|$ {\it Prof. Purushottam Kulkarni} \hfill{\sl \small (July - Nov '19)}
+%\vspace{1pt}
+%\\
+%{\it CS 101 - Computer Programming} \& {\it Utilization} $\bigm|$ {\it Prof. Purushottam Kulkarni} \hfill{\sl \small \textsc{IIT Bombay}}\\
+%\vspace{-19pt}
+%\begin{itemize}[itemsep = -1 mm, leftmargin=*]
+%\item \textbf{Only sophomore} to be selected for TA-Ship on the basis of {\bf academic prowess} in the subject. Involved in teaching and assisting students within and outside lab hours,  with problems and conceptual doubts on a {\bf one-to-one basis}
+%\end{itemize}
+\vspace{-5pt}
+\textbf{Interact Coordinator | Community Service} $\bigm|$ {\it Rotary Club of Calcutta Visionaries}\hfill{\sl \small (2017-18)}
+%\vspace{1pt}
+\\
+%\hfill{\sl \small \textsc{Rotary International}}\\
+\vspace{-12pt}
+\begin{itemize}[itemsep = -1 mm, leftmargin=*]
+    \item Coordinated {\bf blood camps, health camps}, eye camps, newspaper collection drives, {\bf organised sports} for {\it village children} in the Sunderbans. Conducted free {\bf computer classes} for {\it underpriveleged} children of Sambhu Sadan Vidayala, Kolkata
+\end{itemize}
+%\vspace{-5pt}
+%\textbf{Events Coordinator, Techfest} $\bigm|$ {\it Asia's largest Science and Technology Festival} \hfill{\sl \small \textsc{IIT Bombay} $\bigm|$ (2019-20)}
+%\vspace{1pt}\\
+%\\
+%\hfill{\sl \small \textsc{IIT Bombay}}\\
+%\vspace{-19pt}
+%\begin{itemize}[itemsep = -1 mm, leftmargin=*]
+%\item Spearheaded a team of {\bf 15+} in conceptualizing and organizing {\bf Technoholix}, featuring {\sl International} performances. Organized {\bf PAN India} workshops on investment education with {\sl NISM, NSE} \& {\sl SEBI}, under the {\it Financial Literacy Initiative}
+% , part of the {\it Techfest World MUN} 2020 team
+%\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  TECHNICAL SKILLS   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-20pt}
+\section*{\large Technical Skills\xfilll[0pt]{0.5pt}}
+\vspace{-10pt}
+\textsc{C++, Python, Java, Bash, Matlab, Pytorch, TensorFlow, Git, \LaTeX, HTML, CSS, Javascript, Sqlite}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  TECHNICAL SKILLS   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%Confirm Years of all
+
+%French
+
+\end{document}\grid
+\grid
