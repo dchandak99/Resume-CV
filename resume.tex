@@ -5,6 +5,7 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{wrapfig}
+\usepackage{setspace}
 \usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
 
@@ -73,9 +74,9 @@
 \begin{itemize}[itemsep = -1 mm, leftmargin=*]
     \item \underline{Formal {\bf Verification}} of \textsl{security protocols}: 
     \vspace{-7pt}
-    \begin{itemize}[itemsep = -0.75 mm, leftmargin=*]
-    \item Studied operational semantics, equivalence properties (in the \textit{applied pi calculus} and \textbf{Tamarin} prover) and the \textbf{SAPIC} plugin (tool translating high level protocols to multiset rewrite rules, {\it analyzable} by Tamarin)
-    \item Introduced the notion of biprocesses (\textit{semantics and translation}) and {\bf diff equivalence} in SAPIC, and worked on the soundness proof of the translation after the addition 
+    \begin{itemize}[itemsep = -0.6 mm, leftmargin=*]
+    \item Studied operational semantics, equivalence properties (in the \textit{applied pi calculus} and \textbf{Tamarin} prover) and the \textbf{SAPIC}\vspace{-0.3mm} plugin (tool translating high level protocols to multiset rewrite rules, {\it analyzable} by Tamarin)
+    \item Introduced the notion of biprocesses (\textit{semantics and translation}) and {\bf diff equivalence} in SAPIC, and worked on the\vspace{-0.3mm} soundness proof of the translation after the addition 
     \end{itemize}
 \end{itemize}
 \vspace{-4pt}
@@ -85,21 +86,21 @@
 \vspace{-16pt}
 \begin{itemize}[itemsep = -1 mm, leftmargin=*]
     \item \textbf{Deep Learning: }{\it Applying \underline{NLP techniques} to \textbf{Time Series Analysis} for Stock Futures :}
-    \vspace{-7pt}
-    \begin{itemize}[itemsep = -0.75 mm, leftmargin=*]
+    \vspace{-6pt}
+    \begin{itemize}[itemsep = -0.6 mm, leftmargin=*]
       %\begin{small}
-      \item Designed and implemented an intuitive approach for storing the history of a stock in the form of a vector using a Ticker \textbf{Embedding Model}, similar to a Word Embedding model. Incorporated technical indicators such as Momentum, Trailing Volatility, Asset Class and average return per asset class along with the embeddings
-     \item Designed, trained and tested an \textbf{LSTM} classifier (using \textbf{PyTorch}) trained on a time series of multiple stock tickers to predict returns and study non linearity \& inter asset class correlation. 
-     \item Expanded the LSTM to incorporate \textbf{attention}, and \textit{retrain} over latest data \textit{while testing}
+      \item Designed and implemented an intuitive approach for storing the history of a stock in the form of a vector using a Ticker\vspace{-0.3mm} \textbf{Embedding Model}, similar to a Word Embedding model. Incorporated technical indicators such as Momentum,\vspace{-0.3mm} Trailing Volatility, Asset Class and average return per asset class along with the embeddings
+     \item Designed, trained and tested an \textbf{LSTM} classifier (using \textbf{PyTorch}) trained on a time series of multiple stock tickers to\vspace{-0.3mm} predict returns and study non linearity \& inter asset class correlation. 
+     \item Expanded the LSTM to incorporate \textbf{attention}, and \textbf{retrain} over latest data \textit{while testing}
      \item Optimized the hyperparameters using libraries: Ray for \textbf{Grid Search} and Hyperopt for \textbf{Bayesian} optimization
      %\end{small}
     \end{itemize}
     \vspace{-3.5pt}
     \item \textbf{Trading Algorithms:} Implemented the \textbf{Pairs}, \textbf{Betting against} $\bm{\beta}$ and \textbf{Momentum} trading algorithms in \textbf{Python}
     \vspace{-7pt}
-    \begin{itemize}[itemsep = -0.75 mm, leftmargin=*]
-      \item Calculated $\beta$ by regression on the \textbf{CAPM} equation with a 6 month rolling window: Experimented with daily, weekly and monthly \textit{rebalancing} of the portfolio, and anaylzed the output on equally weighted and value weighted portfolios
-     \item Modified the Pairs strategy on a 1 year rolling window with 12\% CAGR and 0.71 overall Sharpe and researched the intricacies involved in the strategies:  Pitroski's F-Score, Mohanram's G-Score, Accruals, PEAD and Momentum crashes
+    \begin{itemize}[itemsep = -0.6 mm, leftmargin=*]
+      \item Calculated $\bm{\beta}$ by regression on the \textbf{CAPM} equation with a 6 month rolling window: Experimented with daily, weekly\vspace{-0.3mm} and monthly \textit{rebalancing} of the portfolio, and anaylzed the output on equally weighted and value weighted portfolios
+     \item Modified the Pairs strategy on a 1 year rolling window with 12\% CAGR and 0.71 overall Sharpe and researched the\vspace{-0.3mm} intricacies involved in the strategies:  Pitroski's F-Score, Mohanram's G-Score, Accruals, PEAD and Momentum crashes
     \end{itemize}
     \vspace{-3.5pt}
     \item Awarded a \textbf{Letter of Recommendation} for {\it exceptional} performance shown throughout the internship
@@ -272,7 +273,7 @@
 \vspace{-10pt}
 \begin{tabular}{p{3cm} p{17cm}}
     \textbf{Languages} & \textsc{C++, Python, Java, Bash, Matlab, Vhdl}  \\
-    \textbf{ML Libraries} & \textsc{Pytorch, Keras, TensorFlow, Ray, Hyperopt, Scikit-Learn, Rouge, Grobid}  \\
+    \textbf{ML Libraries} & \textsc{Pytorch, Keras, TensorFlow, Scikit-Learn, Ray, Hyperopt, Rouge, Grobid}  \\
     \textbf{Web Tools} & \textsc{HTML5, CSS3, Javascript, Bootstrap, Django, Sqlite3, Markdown} \\
     \textbf{Software Tools} & \textsc{Git, \LaTeX, Sed, Awk, Makefiles, Scipy, ns3, Wireshark, Proverif}\\
 \end{tabular}
