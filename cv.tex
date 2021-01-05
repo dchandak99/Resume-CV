@@ -3,7 +3,7 @@
 % moderncv themes
 \moderncvtheme[blue]{classic} 
 % adjust the page margins
-\usepackage[scale=0.92,top=0.5cm,bottom=0.2cm]{geometry}
+\usepackage[scale=0.92,top=0.5cm,bottom=0.3cm]{geometry}
 \recomputelengths    
 % required when changes are made to page layout lengths
 %\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=0.5cm,nohead,nofoot]{geometry}
@@ -14,6 +14,7 @@
 \fancyfoot{} % clear all footer fields
 %\fancyfoot[LE,RO]{\thepage}    
 %\fancyfoot[RE,LO]{\footnotesize}
+\setlength{\hintscolumnwidth}{2cm}
 
 \renewcommand*{\cventry}[7][.25em]{%
   \cvitem[#1]{#2}{%
@@ -75,7 +76,7 @@ Indian Institute of Technology, Bombay} }
 \maketitle
 \pagestyle{empty}
 %\vspace{-2mm}
-\vspace{-10mm}
+\vspace{-8mm}
 
 %Section
 %section{Education}
@@ -84,10 +85,13 @@ Indian Institute of Technology, Bombay} }
 %\cvdoubleitem{2003-2016}{\small\url{https://github.com/dilawar}\normalsize}{Skype}%{\small dilawar\_s}
 
 \section{Education}
+%\vspace{-0.5mm}
 \cventry{2018 - Present}{Bachelor of Technology in Computer Science and Enginnering}{\newline Indian Institute of Technology Bombay,}{Mumbai, India}{\newline Cumulative GPA : 9.62 / 10.00 }{}  % arguments 3 to 6 can be left empty
+%\vspace{-1mm}
 \cventry{2016 - 2018}{All India Senior School Certificate Examination}{\newline Central Board of Secondary Education (CBSE) Board Examinations,}{Grade 12}
 {\newline Birla High School, Kolkata, }
 {Percentage : \textit{99\%}}
+%\vspace{-1mm}
 \cventry{2003 - 2016}{Indian Certificate of Secondary Education}{\newline ICSE Board Examinations,}{Grade 10}{\newline La Martiniere for Boys, Kolkata, }
 {Percentage : \textit{98.67\%}}
 \vspace{-2mm}
@@ -104,7 +108,7 @@ Indian Institute of Technology, Bombay} }
 \cventry{2018}{}{}{}{}
   {Awarded {\textbf {AP grade}} in {\textbf {Advanced Calculus}} (given to the top 12 students out of 1032) and in the {\textbf {Biology}}\\ course consisting of \textit{Molecular, Physical and Biomedical modules} (top 3 students out of 502)}
 
-\cventry{2018}{}{}{}{}
+\cventry{2018, 2020}{}{}{}{}
   {Attained a Semester Performance Index (\textbf{SPI}) of \textbf {perfect 10} in the First, Fourth and Fifth Semesters}
 
 \cventry{2019}{}{}{}{}
@@ -115,6 +119,28 @@ Indian Institute of Technology, Bombay} }
 % work.
 \vspace{-2mm}
 \section{Internship and Research Experience}
+\cventry{Dec - Jan 2020-21}{Software Development Intern}{\hfill{\sl \small \textsc {Motilal Oswal Financial Servies Ltd.}}}
+%{\textit{Asia's largest Science and Technology Festival, footfall of 175,000 +} \hfill{\sl \small \textsc {IIT Bombay}%
+{\newline \textit{Guide: Mr. Sachin Korgaonkar (Project Manager)}}{\newline}
+{\begin{itemize}%[itemsep = -0.75 mm, leftmargin=*]
+  \item Designed an HR \textbf{Compliance portal} with functions for different user types, using \textsc{C\#, Asp.Net} \& \textsc{Ms-Sql}
+  \item Features: add/edit user and document category details, upload documents in each category and view in repository
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{July - Dec 2020}{Computational Linguistics (COLING) Conference, 2020}{\hfill{\sl \small \textsc{NLP Conference}}}
+{\newline {}}{}
+{\textbf{Textgraphs-14: }Shared Task on \textbf{Multi-Hop Inference} for \textbf{Explanation Regeneration:}
+\begin{itemize}
+    % \item Optimizing the \textit{tf.idf} baseline to construct \textit{gold explanations} for elementary science questions (WorldTree corpus)
+     \item Co-authored a \textbf{publication}, developed methods to reconstruct gold explanations for elementary science questions
+    \item Developed a model with an improvised Information Retrieval using tf-idf to rank all explanations in the dataset
+    \item Designed a unique \textit{re-ranker} using \textbf{BERT}, \textit{RoBERTa} \& \textit{SciBERT}, got 0.5061 \textsc{Map} score and were ranked \textbf{4th}
+     % \item Used \textbf{tensorflow\_hub} to \textit{embed} facts directly as sentences, ranked them by lexical overlap with the questions %and answers
+      %\item Linking facts based on \textbf{lexical overlap} (\textit{knowledge graph}) to select \textsl{next-hop} facts and using \textbf{BERT} for reranking
+    \end{itemize}
+}
+\vspace{1mm}
 \cventry{Apr - May 2020}{Research Intern $\bigm|$ \textit{Cryptography}}{\hfill{\sl \small \textsc {INRIA, Nancy, France}}}
 {\newline {{\underline{Formal \textbf{Verification}} of security protocols:} \hfill{\textit {Guide(s): Prof. Steve Kremer and Jannik  Dreier}}}}{\newline}
 {
@@ -131,11 +157,14 @@ Indian Institute of Technology, Bombay} }
 \begin{itemize}
     %\item {\textit {\underline {Analysis of underperforming stores}} given all KPIs and SKU (Stock Keeping Units) level data  }
     %\begin{itemize}%
-      \item Designed and implemented an intuitive approach to storing the history of a stock in the form of a vector using a Ticker Embedding Model, similar to that in a Word Embedding model
-     \item  Incorporated a number of technical indicators such as Momentum, Trailing Volatility, Asset Class and average return across each asset class along with these embeddings for time series analysis
-     \item Designed, trained and tested an \textbf{LSTM} classifier (built using \textbf{PyTorch}) on a time series of multiple stock tickers to predict the Expected Return and to study non linearity and inter asset class correlation
-     \item Expanded the base LSTM to incorporate \textbf{attention}, and \textit{retrain} over the latest data \textit{while testing}
+    \item Designed an intuitive approach for storing the stock history as a vector using a Ticker \textbf{Embedding Model}. Incor- porated technical indicators such as Momentum, Trailing Volatility, Asset Class and average return per asset class
+     \item Designed and implemented an \textbf{LSTM} classifier (using \textbf{PyTorch}) to forecast the trend of \textbf{Expected Returns} %of stock futures
+     \item Expanded the LSTM to incorporate \textbf{attention}, and \textbf{retrain} over latest data \textit{while testing}
      \item Optimized the hyperparameters using libraries: Ray for \textbf{Grid Search} and Hyperopt for \textbf{Bayesian} optimization
+      %\item Designed and implemented an intuitive approach for storing the history of a stock in the form of a vector using a Ticker \textbf{Embedding Model}, similar to a Word Embedding model. Incorporated technical indicators such as Momentum, Trailing Volatility, Asset Class and average return per asset class along with the embeddings
+     %\item Designed, trained and tested an \textbf{LSTM} classifier (using \textbf{PyTorch}) trained on a time series of multiple stock tickers to predict returns and study non linearity \& inter asset class correlation. 
+     %\item Expanded the LSTM to incorporate \textbf{attention}, and \textbf{retrain} over latest data \textit{while testing}
+     %\item Optimized the hyperparameters using libraries: Ray for \textbf{Grid Search} and Hyperopt for \textbf{Bayesian} optimization
      \vspace{2pt}
     \item Awarded a \textbf{Letter of Recommendation} for {\it exceptional} performance shown throughout the internship
     \end{itemize}
@@ -143,18 +172,15 @@ Indian Institute of Technology, Bombay} }
 \cventry{}{}{}
 {}{}
 {%\vspace{4mm}
-\textsc{Trading Algorithms: }\underline{{Implementation in \textbf{Python} :}}
+\textsc{Trading Algorithms: }\textit{Implementation} and {\it back-testing} using \textbf{Python}
 \begin{itemize}
     %\item {\textit {\underline {Analysis of underperforming stores}} given all KPIs and SKU (Stock Keeping Units) level data  }
     %\begin{itemize}%
-      \item Worked towards developing, modifying and implementing \textbf{PAIRS}, \textbf{Betting against Beta} and \textbf{Momentum} trading algorithms on the Indian Stock market at the NSE Trading Lab
-      \item Beta was calculated by regression on the \textbf{CAPM} equation with a 6 month rolling window : 
-      \begin{itemize}
-          \item The strategy was implemented with daily, weekly and monthly \textit{rebalancing} of the portfolio
-          \item Performed and anaylzed the difference in output on equal weighted and value weighted portfolios
-      \end{itemize}
-     \item Modified the PAIRS strategy on a rolling window of 1 year with 12\% CAGR and 0.71 overall Sharpe
-     \item Researched the intricacies in  Pitroski's F-Score, Mohanram's G-Score, Accruals, PEAD and Momentum crashes
+      %\item Calculated $\bm{\beta}$ by regression on the \textbf{CAPM} equation with a 6 month rolling window: Experimented with daily, weekly and monthly \textit{portfolio rebalancing}, anaylzed the output on equally weighted and value weighted portfolios
+      \item  Implemented the \textbf{Pairs}, \textbf{Betting against} $\bm{\beta}$ and \textbf{Momentum} trading algorithms on the Nifty-200 stocks
+      \item Experimented with daily, weekly\vspace{-0.3mm} and monthly \textit{rebalancing} of equally weighted and value weighted portfolios
+      %\item Compared the effects of different re-balancing peri
+     %\item Modified the Pairs strategy on a 1 year rolling window with 12\% CAGR and 0.71 Sharpe. Researched the intricacies involved in the \textbf{strategies}:  Pitroski's F-Score, Mohanram's G-Score, Accruals, PEAD and Momentum crashes
     \end{itemize}
 %\end{itemize}%
 }
@@ -167,7 +193,7 @@ Indian Institute of Technology, Bombay} }
     %\begin{itemize}%
       \item 
           {\textbf {Statistical Analysis}} of transactional \& brick level data of the underperforming stores, to understand and attribute reasons for de-growth, using \textbf{Pandas}, Sqlite and the various graph visualizations in \textbf{Matplotlib}
-     \item Given all the {\textbf {KPIs}} with respect to category, used {\textbf {deep dive}} into individual SKU level performance to come up with solutions to counter degrowth, in the {\textit {MGF Gurgaon Hyper}} store and the {\textit {Vizag Hyper}} store
+     \item Given all the {\textbf {KPIs}} with respect to category, {\textbf {deep dived}} into individual SKU level performance to come up with solutions to counter degrowth, in the {\textit {MGF Gurgaon Hyper}} store and the {\textit {Vizag Hyper}} store
     \end{itemize}
 %\end{itemize}%
 }
@@ -178,7 +204,7 @@ Indian Institute of Technology, Bombay} }
     %\item \underline{\textit {Analysis of ML Algorithms for Spam Email Classification in Python}}
     %\begin{itemize}%[itemsep = -0.75 mm, leftmargin=*]
       \item Analyzed KNN, Naive Bayes, SVMs and Neural Networks and finally implemented {\textbf {Naive Bayes}} and {\textbf {KNN}} for the classification of various data sets into {\textbf {spam and ham}} using {\textit {Keras}}, Pandas, Numpy and {\textit {Scikit-learn}}
-      \item Compared accuracies for various data sets and {\textbf {categorised the best method}} for each data set
+%      \item Compared accuracies for various data sets and {\textbf {categorised the best method}} for each data set
     %\end{itemize}
 \end{itemize}}
 \vspace{1mm}
@@ -187,31 +213,103 @@ Indian Institute of Technology, Bombay} }
 %{\textit{Asia's largest Science and Technology Festival, footfall of 175,000 +} \hfill{\sl \small \textsc {IIT Bombay}%
 {\newline \textit{Guide: Mr. Mohsin Ali (Project Manager)}\hfill{\sl \small \textsc {Citytech Software Pvt. Ltd.}} }{\newline}
 {\begin{itemize}%[itemsep = -0.75 mm, leftmargin=*]
-  \item Configured and enhanced a \textbf{chatbot} for Paylite Leave Application using the \textbf{Microsoft LUIS} platform 
-  \item Helped in introducing VOICE to TEXT feature (using Bing API) from Microsoft Azure
-  \item Research on \textbf{Human Resource Automation} and \textbf{comparative study} between {\textit {LUIS}}, {\textit {Google Dialog Flow}} and other developments in \textit{Google Assistant, IBM Watson, Alexa and Cortana}
+  \item Configured and enhanced a \textbf{chatbot} for Leave Applications using \textbf{Microsoft LUIS} after a \textit{comparative study} with \textit {Google Dialog Flow}. Helped in introducing \textsl{Voice to Text feature} (using Bing API) from Microsoft Azure
+  \item Research on \textbf{Human Resource Automation} \& developments in \textit{Google Assistant, IBM Watson, Alexa \& Cortana}
 \end{itemize}
 }
+\vspace{-2mm}
 \section{Projects \& Key Assignments}
-\cventry{COLING \\2020}{Textgraphs-14 $\bigm|$ COLING}{\hfill{\sl \small \textsc{NLP Conference Workshop} $\bigm|$ (July '20 - Present)}}
-{\newline {}}{}
-{Shared Task on \textbf{Multi-Hop Inference for Explanation Regeneration:}
-\begin{itemize}
-     \item Optimizing the \textit{tf.idf} baseline to construct gold explanations for science questions, using the WorldTree corpus
-      \item Linking facts based on \textbf{lexical overlap} to select \textsl{next-hop} explanations, using \textbf{BERT} for reranking
-    \end{itemize}
+%\cventry{Natural Language Processing}{Computational Linguistics (COLING) Conference, 2020}{\hfill{\sl \small \textsc{NLP Conference} $\bigm|$ (July - Dec '20)}}
+%{\newline {}}{}
+%{\textbf{Textgraphs-14: }Shared Task on \textbf{Multi-Hop Inference} for \textbf{Explanation Regeneration:}
+%\begin{itemize}
+    % \item Optimizing the \textit{tf.idf} baseline to construct \textit{gold explanations} for elementary science questions (WorldTree corpus)
+%     \item Co-authored a \textbf{publication}, developed methods to reconstruct gold explanations for elementary science questions
+%    \item Developed a model with an improvised Information Retrieval using tf-idf to rank all explanations in the dataset
+%    \item Designed a unique \textit{re-ranker} using \textbf{BERT}, \textit{RoBERTa} \& \textit{SciBERT}, got 0.5061 \textsc{Map} score and were ranked \textbf{4th}
+     % \item Used \textbf{tensorflow\_hub} to \textit{embed} facts directly as sentences, ranked them by lexical overlap with the questions %and answers
+      %\item Linking facts based on \textbf{lexical overlap} (\textit{knowledge graph}) to select \textsl{next-hop} facts and using \textbf{BERT} for reranking
+ %   \end{itemize}
+%}
+%
+%\vspace{1mm}
+%\cventry{EMNLP \\2020}{Scholarly Document Processing $\bigm|$ EMNLP}{\hfill{\sl \small \textsc{NLP Conference Workshop} $\bigm|$ (Apr '20 - Present)}}
+%{\newline {}}{}
+%{ \textsc{LongSumm: }
+%Shared Task for {\underline{\textit{Generating long summaries}} of scientific documents:}
+%\begin{itemize}
+%     \item Parsed PDFs to extract individual sections of scientific papers using GROBID and \textit{Beautiful Soup}, in \textbf{Python}
+%     \item Combining \textit{abstractive} \& \textit{extractive} summarization and exploring \textsl{Reinforcement Learning} techniques
+%     \item Building models based on \textbf{PreSumm} (\textbf{SciBERT} with pretrained encoders), to summarize each section seperately
+%    \end{itemize}
+%}
+%
+%\vspace{1mm}
+\cventry{Computer Architecture}{Buffer Overflow Attacks and Defenses}
+{\hfill{\textsc{prof. bernard menezes} $\bigm|$ \sl \small (Sept - Dec '20)}}{\newline}{}
+{  \begin{itemize}
+    \item Demonstrated the Stack and Heap based buffer overflow exploits and the special cases: Return to LibC, Off by One, Use after Free using \textbf{C} \& \textbf{x86}. Performed a detailed case study on the Code Red Worm (buffer overflow based)
+    %\item Performed a detailed case study on the Code Red Worm which was based on buffer overflow
+\end{itemize}
 }
 \vspace{1mm}
-\cventry{EMNLP \\2020}{Scholarly Document Processing $\bigm|$ EMNLP}{\hfill{\sl \small \textsc{NLP Conference Workshop} $\bigm|$ (Apr '20 - Present)}}
-{\newline {}}{}
-{ \textsc{LongSumm: }
-Shared Task for {\underline{\textit{Generating long summaries}} of scientific documents:}
-\begin{itemize}
-     \item Parsed PDFs to extract individual sections of scientific papers using GROBID and \textit{Beautiful Soup}, in \textbf{Python}
-     \item Combining \textit{abstractive} \& \textit{extractive} summarization and exploring \textsl{Reinforcement Learning} techniques
-     \item Used ROUGE between sentences in target summary and document, to generate target sectional summaries
-     \item Building models based on \textbf{PreSumm} (\textbf{SciBERT} with pretrained encoders), to summarize each section seperately
-    \end{itemize}
+\cventry{Software Systems}{Google Forms and Survey Management}
+{\hfill{\textsc{prof. amitabha sanyal} $\bigm|$ \sl \small (Sept - Nov '19)}}{\newline}{}
+{  \begin{itemize}
+    \item Designed own Form and Survey Management system like Google Forms with \textbf{user authentication}
+    \item Allowed \textit{\underline{modular}} question design (paragraph, file upload, dropdown, checkbox, radio button), form validation (constraints like alphanumeric, range, email-ID, .pdf only), adding \textbf{collaborators} and shareable forms (surveys)
+    \item Data analyzable by numeric plotting (\textbf{Matplotlib}), learning dependencies in responses and summaries of subjective answers. Used \textbf{Django} for backend, \textbf{Sqlite3} for database structure, \textbf{Bootstrap} for responsiveness
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Natural Language Processing}{Sentiment Analysis by BERT}
+{\hfill{\textsc{Self Project} $\bigm|$ \sl \small (July '20)}}{\newline}{}
+{  \begin{itemize}
+    \item Achieved \textbf{91 \%} accuracy in predicting positive/negative sentiments on the \textbf{IMDB} reviews dataset
+    \item Used BERT from the Hugging Face \textit{transformers} library and \textbf{Pytorch} for preprocessing and funetuning the model
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Operating Systems}{File System}
+{\hfill{\textsc{prof. mythili vutukuru} $\bigm|$ \sl \small (Oct - Nov '20)}}{\newline}{}
+{  \begin{itemize}
+    \item Emulated a disk over a text file with the superblock, inode and data blocks. Implemented a file system on the emulated disk with basic operations like open/close/read and write
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Operating Systems}{Copy-on-Write Fork in xv6}
+{\hfill{\textsc{prof. mythili vutukuru} $\bigm|$ \sl \small (Oct '20)}}{\newline}{}
+{  \begin{itemize}
+    \item Implemented the CoW fork which allocates new memory pages only on modification by the child/parent
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Operating Systems}{Custom Memory Manager}
+{\hfill{\textsc{prof. mythili vutukuru} $\bigm|$ \sl \small (Sept - Oct '20)}}{\newline}{}
+{  \begin{itemize}
+    \item Implemented a memory manager to allocate and deallocate memory dynamically. Extended\vspace{-0.25mm} the allocator to be elastic and map pages only on demand
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Operating Systems}{Scheduler in xv6}
+{\hfill{\textsc{prof. mythili vutukuru} $\bigm|$ \sl \small (Sept '20)}}{\newline}{}
+{  \begin{itemize}
+    \item Modified the current scheduler in xv6 to consider user-defined process priorities. Used priorities as\vspace{-0.25mm} weights to implement a weighted round robin scheduler, while taking care of starvation
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Operating Systems}{Custom Linux Shell}
+{\hfill{\textsc{prof. mythili vutukuru} $\bigm|$ \sl \small (Aug '20)}}{\newline}{}
+{  \begin{itemize}
+    \item Built a shell in \textbf{C} with support for background, serial \& parallel processes, and kill signal \& exit
+\end{itemize}
+}
+\vspace{1mm}
+\cventry{Machine Learning}{Pure Numpy Implementation of CNN}
+{\hfill{\textsc{prof. ganesh ramakrishnan} $\bigm|$ \sl \small (Nov - Dec '20)}}{\newline}{}
+{  \begin{itemize}
+    \item Implemented the Fully Connected, Convulution, Avg and Max Pooling layers\vspace{-0.25mm} in pure numpy. Trained the model on the MNIST and CIFAR10 datasets to achieve accuracies of 94\% \& 53\% respectively
+\end{itemize}
 }
 \vspace{1mm}
 \cventry{Computer Networks}{Distributed Spanning Tree Protocol}
@@ -226,53 +324,32 @@ Shared Task for {\underline{\textit{Generating long summaries}} of scientific do
 {\hfill{\textsc{prof. ashutosh gupta} $\bigm|$ \sl \small (Jan - Feb '20)}}{\newline}{}
 {  \begin{itemize}
     \item Designed a SAT Solver using \textbf{z3 in Python}, to check satisfiability in CNF (Conjunctive Normal Form)
-    \item Solved the \textit{NQueens and Sudoku} problems with the designed solver, using \textbf{DPLL} (a backtracking algorithm) 
+    \item Solved the \textit{NQueens, Sudoku} and \textit{Graph Colouring} problems with the solver, using \textbf{DPLL} (backtracking algorithm) 
 \end{itemize}
 }
 \vspace{1mm}
-\cventry{Software Systems}{Google Forms and Survey Management}
-{\hfill{\textsc{prof. amitabha sanyal} $\bigm|$ \sl \small (Sept - Nov '19)}}{\newline}{}
-{  \begin{itemize}
-    \item Designed own Form and Survey Management system like the Google Forms with own \textbf{user authentication}
-    \item Allowed for \textit{\underline{modular}} design of questions (single and multi line, file upload, drop down, checkbox, radio button, rating scale and toggle) and form validation (can give constraints on each answer such as alphanumeric, numeric, range, email-ID, .pdf only), and added a feature of adding \textbf{collaborators} to your form
-    \item Developed shareable forms, useable as surveys and quizzes. Data acquired
-    is analyzed by plotting of numerics (using \textbf{Matplotlib}), learning dependencies among responses and summarized presentation of subjective answers
-    \item Used \textbf{Django} for backend, \textbf{Sqlite3} for the database structure, \textbf{Bootstrap} for responsiveness
-\end{itemize}
-}
-\vspace{1mm}
-\cventry{Data Structures and Algorithms}{Efficient Memory Allocator}
+\cventry{Data Structures, Algorithms}{Efficient Memory Allocator}
 {\hfill{\textsc{prof. ajit diwan} $\bigm|$ \sl \small (Aug - Sept '19)}}{\newline}{}
 {  \begin{itemize}
-    \item Designed a simulator in \textbf{C++} for the efficient dynamic allocation of memory to a large number of processes
-    \item Utilized the \textbf{first-fit strategy} to decide the locations at which memory should be allocated
-    \item Handled allocation, deallocation and termination requests for upto $10^{\text{6}}$ requests simultaneously
+    \item Designed a simulator in \textbf{C++} for efficient dynamic memory allocation of processes using the \textbf{first-fit strategy}
+   \item Handled allocation, deallocation and termination requests for upto $10^{\text{6}}$ process requests simultaneously
 \end{itemize}
 }
 \vspace{1mm}
-\cventry{Data Analysis}{Fruit Image Generation and PCA}
+\cventry{Data Analysis}{PCA for Fruit Image Generation and MNIST}
 {\hfill{\textsc{prof. suyash awate} $\bigm|$ \sl \small (Oct - Nov '19)}}{\newline}{}
 {  \begin{itemize}
-    \item \textit{\underline{Principal Component Analysis}} was performed on RGB images of 100 fruits, and the closest representations were plotted, in \textbf{MATLAB}, using the mean and the four eigenvectors corresponding to the four most significant eigenvalues of the covariance matrix. A \textit{MultiVariate Gaussian} was fitted on the entire dataset
-    \item New Fruit images were generated by random sampling, using the closest representations, which were distinct from any fruit in the dataset, but representative of the dataset
+    \item Plotted closest representations of RGB fruit images, using \textit{PCA} (\textit{MultiVariate Gaussian} fitting). Generated new images by random sampling (representative of the dataset), using the closest representations, in \textbf{MATLAB}
+    \item Performed \textit{PCA} on the MNIST dataset to visualize principal modes of variation (\textit {MultiVariate\vspace{-0.25mm} Gaussian} fitting), in \textbf{MATLAB}, decided on number of \textit{degrees of freedom} of digits and inferred handwriting tendencies.
 \end{itemize}
 }
+%\vspace{0.75cm} for ptopif leave
 \vspace{1mm}
-\cventry{Data Analysis}{PCA on MNIST data}
-{\hfill{\textsc{prof. suyash awate} $\bigm|$ \sl \small (Oct - Nov '19)}}{\newline}{}
-{  \begin{itemize}
-    \item Given the MNIST dataset, \textbf{Principal Component Analysis} was performed on the images of each digit to visualize their principal modes of variation about the mean (by fitting a \textit
-    {MultiVariate Gaussian}) in \textbf{MATLAB}
-    \item The number of principal eigenvalues were found, to decide on the number of \textit{degrees of freedom} of each digit
-    \item Attributed reasons to why the number of significant eigenvalues are far lesser than total, and also concluded behavioural patterns in writing digits based on the principal modes of variation
-\end{itemize}
-}
-\vspace*{0.75cm}
 \cventry{Data Analysis}{Non Parametric Estimation \& Cross Validation}
 {\hfill{\textsc{prof. ajit rajwade} $\bigm|$ \sl \small (Sept - Oct '19)}}{\newline}{}
 {  \begin{itemize}
-    \item Compared various non paramteric estimation techniques like histogramming and Kernel Density Estimation and anaylzed the \textit{rate of convergence} and their optimum value
-    \item Implemented the Cross-Validation procedure in \textbf{MATLAB} by finding out the bandwidth parameter which gives the maximum joint likelihood and a minimum deviation between the empirical and the actual PDF
+    \item Compared non parametric methods (histograms \& Kernel Density Estimation), anaylzed the \textit{rate of convergence}
+    \item Implemented Cross Validation in \textbf{MATLAB} (\textit{bandwidth selection} giving maximum likelihood \& minimum deviation)
 \end{itemize}
 }
 \vspace{1mm}
@@ -283,6 +360,7 @@ Shared Task for {\underline{\textit{Generating long summaries}} of scientific do
   \item Used \textit{KMeans++} algorithm to flatten out coloured images across several K values to get the \textbf{Enhanced} Image  
 \end{itemize}
 }
+%\vspace{50mm}
 \section{Scholarships and Recognition} 
 \cventry{2018 - 19}{}{}{}{}{Bagged the \textbf {Institute Academic Award}, given to the \textbf{Top 25} out of a batch of 1000+ students for \textit{exceptional} academic performance in the first year of Undergraduate Study at IIT Bombay}
 \cventry{2018}{}{}{}{}
@@ -336,14 +414,14 @@ Shared Task for {\underline{\textit{Generating long summaries}} of scientific do
   %  extract data from old figures are more popular on github.
 %}
 \section{Technical Skills}
-\cvline{Languages}{\textsc{C++, Python, Java, Bash, MATLAB}}
+\cvline{Languages}{\textsc{C++, Python, Java, C\#, Bash, MATLAB}}
 \cvline{ML Libraries}{\textsc{Pytorch, Keras, TensorFlow, Scikit- Learn, Ray, Hyperopt, ROUGE }}
 %\cvline{CAD Tools}{KiCAD, Cadence, Xilinx and Altera tools, Ngspice}
-\cvline{Web Tools}{\textsc{HTML5, CSS3, Javascript, Bootstrap, Django, Sqlite3, Markdown}}
+\cvline{Web Tools}{\textsc{HTML5, CSS3, Javascript, Bootstrap, Django, Sqlite3, Ms-Sql, Asp.Net}}
 \cvline{Tools and Softwares}{\textsc{Git, \LaTeX, AutoCAD, Sed, Awk, Makefiles, CMake, Scipy, Yaml, Toml, ns3, z3, Wireshark, Proverif, Tamarin, Sapic, GROBID, Beautiful Soup
 }}
 \section{Key Courses Undertaken}
-\cvline{Computer Science and Mathematics}{Data Structures and Algorithms, Discrete Structures, Algorithm Design , Abstractions \& Paradigms, Data Analysis and Interpretation, Software Systems, Computer Programming \& Utilization, Computer Networks, Digital Logic Design, Logic for CS, Calculus, Linear Algebra, Differential Equations}
+\cvline{Computer Science \& Math}{Data Structures and Algorithms, Discrete Structures, Algorithm Design , Abstractions \& Paradigms, Data Analysis and Interpretation, Software Systems, Computer Programming \& Utilization, Computer Networks, Digital Logic Design, Logic for CS, Calculus, Linear Algebra, Differential Equations}
 %\cvline{CAD Tools}{KiCAD, Cadence, Xilinx and Altera tools, Ngspice}
 %\cvline{Mathematics}{Calculus, Linear Algebra, Differential Equations}
 \cvline{Others}{Quantum Physics, Electricity and Magnetism, Biology, Introduction to Electrical and Electronics Circuits}
@@ -360,4 +438,5 @@ Shared Task for {\underline{\textit{Generating long summaries}} of scientific do
 \vspace{-10mm}
 
 
-\end{document}
+\end{document}      \item Calculated $\bm{\beta}$ by regression on the \textbf{CAPM} equation with a 6 month rolling window: Experimented with daily, weekly and monthly \textit{portfolio rebalancing}, anaylzed the output on equally weighted and value weighted portfolios
+
